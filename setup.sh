@@ -9,6 +9,10 @@
 # - copies custom p10k configuration
 
 set -e
+
+# Save the script's directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 echo "Starting terminal configuration setup..."
 
 # Create .zsh directory if it doesn't exist
@@ -71,7 +75,7 @@ fi
 
 # Copy the p10k configuration file
 echo "Copying p10k configuration file..."
-cp "$(dirname "$0")/.p10k.zsh" ~/.p10k.zsh
+cp "$SCRIPT_DIR/.p10k.zsh" ~/.p10k.zsh
 
 # Add p10k config source to .zshrc if not already present
 if ! grep -q "\[\[ ! -f ~/.p10k.zsh \]\] || source ~/.p10k.zsh" ~/.zshrc; then
