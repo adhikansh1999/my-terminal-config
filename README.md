@@ -22,7 +22,7 @@ A highly customizable Zsh theme with blazing fast performance and many visual fe
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/my-terminal-config.git
+   git clone https://github.com/adhikansh1999/my-terminal-config.git
    cd my-terminal-config
    ```
 
