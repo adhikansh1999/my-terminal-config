@@ -58,6 +58,12 @@ if ! grep -q "zoxide init zsh" ~/.zshrc; then
   echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 fi
 
+# Add ~/.local/bin to PATH if not already present
+if ! echo $PATH | grep -q "$HOME/.local/bin"; then
+  echo "Adding ~/.local/bin to PATH in .zshrc..."
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+fi
+
 # Install powerlevel10k
 echo "Installing powerlevel10k..."
 if [ -d ~/powerlevel10k ]; then

@@ -48,8 +48,9 @@ The `setup.sh` script automates the following tasks:
 1. Installs zsh-autosuggestions and adds it to your .zshrc
 2. Installs zsh-autocomplete and adds it to your .zshrc
 3. Installs zoxide and configures it in your .zshrc
-4. Installs Powerlevel10k theme for Zsh
-5. Copies the included .p10k.zsh configuration file to your home directory
+4. Adds ~/.local/bin to your PATH if needed (required for zoxide)
+5. Installs Powerlevel10k theme for Zsh
+6. Copies the included .p10k.zsh configuration file to your home directory
 
 The script checks for existing installations before proceeding and only adds configuration lines to your .zshrc if they don't already exist.
 
